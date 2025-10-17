@@ -1,7 +1,7 @@
-﻿{
+{
   "name": "figma-dashboard",
   "version": "1.0.0",
-  "description": "鏁版嵁鐪嬫澘 - 鍘嗗彶鏂规瀵规瘮",
+  "description": "Data Dashboard - Historical Plan Comparison",
   "main": "index.html",
   "scripts": {
     "dev": "python -m http.server 8000",
@@ -16,7 +16,7 @@
     "css",
     "javascript"
   ],
-  "author": "榛勫嚒",
+  "author": "Huang Fan",
   "license": "MIT",
   "repository": {
     "type": "git",
