@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "name": "figma-dashboard",
+  "buildCommand": "echo 'Static site - no build needed'",
+  "outputDirectory": ".",
+  "installCommand": "echo 'No dependencies to install'"
+}
