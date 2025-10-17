@@ -1,0 +1,866 @@
+/* 界面2的基础样式保持不变，只添加界面3的样式 */
+/* 从界面1整合过来的样式保持不变 */
+
+/* 界面3的市场洞察相关CSS样式 - 限制作用域避免冲突 */
+#market-report-view .cards-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto auto auto;
+	gap: 20px;
+	grid-template-areas:
+		"market-share consumer-analysis"
+		"forecast competitor"
+		"culture culture";
+}
+
+#market-report-view .card-market-share {
+	grid-area: market-share;
+	height: 369px;
+}
+
+#market-report-view .card-consumer-analysis {
+	grid-area: consumer-analysis;
+	height: 369px;
+}
+
+#market-report-view .card-competitor {
+	grid-area: competitor;
+	height: 371px;
+}
+
+#market-report-view .card-forecast {
+	grid-area: forecast;
+	height: 371px;
+}
+
+#market-report-view .card-culture {
+	grid-area: culture;
+	height: 412px;
+}
+
+/* 界面3的其他样式都加上作用域限制 */
+#market-report-view .filter {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+#market-report-view .filter-text {
+	font-size: 12px;
+	color: #8F95B2;
+}
+
+#market-report-view .filter-arrow {
+	width: 7px;
+	height: 4px;
+}
+
+#market-report-view .card-divider {
+	width: 100%;
+	height: 1px;
+	background: #E6E8F0;
+	margin: 20px 0;
+	position: relative;
+	z-index: 11;
+}
+
+#market-report-view .chart-container {
+	position: relative;
+	height: 218px;
+	margin-top: 20px;
+	z-index: 11;
+}
+
+#market-report-view .chart-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 11;
+	background: transparent;
+	border-radius: 8px;
+}
+
+#market-report-view .chart-grid-lines {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 10;
+}
+
+#market-report-view .grid-line {
+	position: absolute;
+	left: 36px;
+	right: 36px;
+	height: 1px;
+	background: repeating-linear-gradient(
+		to right,
+		#E6E8F0 0px,
+		#E6E8F0 4px,
+		transparent 4px,
+		transparent 8px
+	);
+}
+
+#market-report-view .grid-line-0 { top: 100%; }
+#market-report-view .grid-line-50k { top: 75%; }
+#market-report-view .grid-line-100k { top: 50%; }
+#market-report-view .grid-line-150k { top: 25%; }
+#market-report-view .grid-line-200k { top: 0%; }
+
+#market-report-view .chart-lines {
+	position: absolute;
+	top: 10px;
+	left: 36px;
+	right: 36px;
+	height: 176px;
+	z-index: 12;
+}
+
+#market-report-view .chart-line {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+#market-report-view .chart-dots {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 14;
+}
+
+#market-report-view .chart-dot {
+	position: absolute;
+	top: 50%;
+	right: 222px;
+	transform: translateY(-50%);
+	width: 11px;
+	height: 10px;
+	z-index: 15;
+}
+
+#market-report-view .chart-labels {
+	position: absolute;
+	bottom: -20px;
+	left: 0;
+	right: 0;
+	display: flex;
+	justify-content: space-between;
+	padding: 0 36px;
+	z-index: 12;
+}
+
+#market-report-view .label-item {
+	font-size: 12px;
+	color: #8F95B2;
+}
+
+#market-report-view .chart-values {
+	position: absolute;
+	left: 0px;
+	top: 0;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 0 0 0 4px;
+	z-index: 12;
+}
+
+#market-report-view .value-item {
+	font-size: 12px;
+	color: #8F95B2;
+}
+
+#market-report-view .chart-legend {
+	position: absolute;
+	bottom: 20px;
+	left: 48px;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	z-index: 12;
+}
+
+#market-report-view .legend-item {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	font-size: 10px;
+	color: #081735;
+}
+
+#market-report-view .legend-dot {
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: #6C5DD3;
+}
+
+#market-report-view .tooltip {
+	position: absolute;
+	top: 80px;
+	right: 222px;
+	width: 56px;
+	height: 32px;
+	z-index: 15;
+}
+
+#market-report-view .tooltip-pointer {
+	position: absolute;
+	bottom: -4px;
+	left: 24px;
+	width: 8px;
+	height: 4px;
+}
+
+#market-report-view .tooltip-pointer img {
+	width: 100%;
+	height: 100%;
+}
+
+#market-report-view .tooltip-content {
+	background: #081735;
+	color: #FFFFFF;
+	padding: 5px 14px;
+	border-radius: 6px;
+	font-weight: 700;
+	font-size: 14px;
+	text-align: center;
+}
+
+/* 消费者分析卡片样式 */
+#market-report-view .view-all {
+	font-size: 12px;
+	color: #8F95B2;
+	text-decoration: none;
+}
+
+#market-report-view .consumer-stats {
+	position: absolute;
+	top: 122px;
+	right: 24px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+#market-report-view .stat-item {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+#market-report-view .stat-chart {
+	position: relative;
+	width: 67px;
+	height: 67px;
+}
+
+#market-report-view .stat-chart img {
+	width: 100%;
+	height: 100%;
+}
+
+#market-report-view .stat-arrow {
+	position: absolute;
+	top: 16px;
+	right: 16px;
+	width: 21px;
+	height: 15px;
+}
+
+#market-report-view .stat-arrow img {
+	width: 100%;
+	height: 100%;
+}
+
+#market-report-view .stat-info {
+	display: flex;
+	flex-direction: column;
+	gap: 1px;
+}
+
+#market-report-view .stat-value {
+	font-weight: 700;
+	font-size: 14px;
+	color: #081735;
+}
+
+#market-report-view .stat-label {
+	font-size: 12px;
+	color: #8F95B2;
+}
+
+#market-report-view .consumer-chart {
+	position: absolute;
+	top: 108px;
+	left: 24px;
+	width: 205px;
+	height: 205px;
+}
+
+#market-report-view .chart-center {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+#market-report-view .chart-center img {
+	width: 100%;
+	height: 100%;
+}
+
+#market-report-view .chart-inner {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 88px;
+	height: 88px;
+}
+
+#market-report-view .chart-inner img {
+	width: 100%;
+	height: 100%;
+}
+
+#market-report-view .chart-text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+}
+
+#market-report-view .chart-percentage {
+	font-weight: 700;
+	font-size: 18px;
+	color: #0049C6;
+	line-height: 1.2;
+	margin-bottom: 2px;
+}
+
+#market-report-view .chart-label {
+	font-size: 14px;
+	color: #0049C6;
+	line-height: 1.2;
+}
+
+#market-report-view .consumer-legend {
+	position: absolute;
+	top: 24px;
+	right: 24px;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+#market-report-view .legend-dot.female {
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: #FF754C;
+}
+
+#market-report-view .legend-dot.male {
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: #0049C6;
+}
+
+/* 竞品分析卡片样式 */
+#market-report-view .card-dots {
+	display: flex;
+	gap: 6.4px;
+}
+
+#market-report-view .dot {
+	width: 3.2px;
+	height: 3.2px;
+	background: #8F95B2;
+	border-radius: 50%;
+}
+
+#market-report-view .competitor-content {
+	padding: 0;
+}
+
+#market-report-view .competitor-header {
+	background: #F9FAFC;
+	padding: 20px;
+	margin: 0 -24px 12px;
+}
+
+#market-report-view .rate-info {
+	display: flex;
+	justify-content: center;
+	gap: 24px;
+}
+
+#market-report-view .rate-item {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 8px;
+}
+
+#market-report-view .rate-label {
+	font-size: 12px;
+	color: #8F95B2;
+}
+
+#market-report-view .rate-value {
+	font-weight: 700;
+	font-size: 14px;
+	color: #244CB2;
+}
+
+#market-report-view .rate-arrow {
+	width: 12px;
+	height: 12px;
+	background: #FF9A7B;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#market-report-view .competitor-brands {
+	display: flex;
+	justify-content: center;
+	gap: 64px;
+	margin-bottom: 12px;
+}
+
+#market-report-view .brand-item {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+#market-report-view .brand-dot {
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+}
+
+#market-report-view .brand-dot.brand-1 {
+	background: #3F8CFF;
+}
+
+#market-report-view .brand-dot.brand-2 {
+	background: #A0D7E7;
+}
+
+#market-report-view .brand-dot.brand-3 {
+	background: #FFB7F5;
+}
+
+#market-report-view .brand-dot.brand-4 {
+	background: #6C5DD3;
+}
+
+#market-report-view .competitor-chart {
+	margin-bottom: 12px;
+	padding: 0 20px;
+}
+
+#market-report-view .chart-row {
+	display: flex;
+	align-items: center;
+	margin-bottom: 12px;
+	gap: 16px;
+}
+
+#market-report-view .chart-label {
+	font-size: 14px;
+	color: #8F95B2;
+	min-width: 60px;
+	text-align: left;
+}
+
+#market-report-view .chart-bar {
+	height: 8px;
+	border-radius: 4px;
+	overflow: hidden;
+	display: flex;
+	background: #E4E4E4;
+	flex: 1;
+}
+
+#market-report-view .bar-segment {
+	height: 100%;
+}
+
+#market-report-view .bar-segment.brand-1 {
+	background: #3F8CFF;
+}
+
+#market-report-view .bar-segment.brand-2 {
+	background: #A0D7E7;
+}
+
+#market-report-view .bar-segment.brand-3 {
+	background: #FFB7F5;
+}
+
+#market-report-view .bar-segment.brand-4 {
+	background: #6C5DD3;
+}
+
+#market-report-view .competitor-footer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 4px;
+	padding: 20px;
+	background: #F9FAFC;
+	margin: 0 -24px -24px;
+}
+
+#market-report-view .view-details {
+	font-weight: 700;
+	font-size: 14px;
+	color: #244CB2;
+	text-decoration: none;
+}
+
+#market-report-view .arrow-right {
+	width: 4px;
+	height: 8px;
+}
+
+/* 交易预测卡片样式 */
+#market-report-view .forecast-content {
+	padding: 0;
+}
+
+#market-report-view .forecast-value {
+	font-weight: 700;
+	font-size: 32px;
+	color: #081735;
+	margin-bottom: 20px;
+}
+
+#market-report-view .forecast-chart {
+	position: relative;
+	height: 162px;
+	margin-bottom: 20px;
+}
+
+#market-report-view .chart-bars {
+	position: relative;
+	height: 100%;
+}
+
+#market-report-view .bar-container {
+	display: flex;
+	align-items: end;
+	gap: 32px;
+	height: 105px;
+	margin-bottom: 14px;
+}
+
+#market-report-view .bar {
+	width: 22px;
+	border-radius: 5px;
+	flex-shrink: 0;
+}
+
+#market-report-view .bar-1 { height: 38px; background: #E6E8F0; }
+#market-report-view .bar-2 { height: 93px; background: #E6E8F0; }
+#market-report-view .bar-3 { height: 64px; background: #0049C6; }
+#market-report-view .bar-4 { height: 44px; background: #E6E8F0; }
+#market-report-view .bar-5 { height: 59px; background: #E6E8F0; }
+#market-report-view .bar-6 { height: 105px; background: linear-gradient(135deg, #FFB7F5 0%, #6C5DD3 100%); }
+#market-report-view .bar-7 { height: 51px; background: #E6E8F0; }
+#market-report-view .bar-8 { height: 93px; background: #E6E8F0; }
+#market-report-view .bar-9 { height: 26px; background: #E6E8F0; }
+#market-report-view .bar-10 { height: 73px; background: #0049C6; }
+#market-report-view .bar-11 { height: 41px; background: #E6E8F0; }
+#market-report-view .bar-12 { height: 64px; background: #E6E8F0; }
+
+#market-report-view .chart-months {
+	display: flex;
+	justify-content: space-between;
+	font-size: 12px;
+	color: #8F95B2;
+}
+
+#market-report-view .chart-tooltips {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	pointer-events: none;
+}
+
+#market-report-view .tooltip {
+	position: absolute;
+	top: 0;
+	width: 64px;
+	height: 30px;
+}
+
+#market-report-view .tooltip-1 { left: 250px; }
+#market-report-view .tooltip-2 { left: 480px; }
+#market-report-view .tooltip-3 { left: 81px; }
+
+#market-report-view .tooltip-pointer {
+	position: absolute;
+	bottom: -4px;
+	left: 24px;
+	width: 4px;
+	height: 8px;
+}
+
+#market-report-view .tooltip-pointer img {
+	width: 100%;
+	height: 100%;
+}
+
+#market-report-view .tooltip-content {
+	background: #081735;
+	color: #FFFFFF;
+	padding: 5px 14px;
+	border-radius: 6px;
+	font-size: 14px;
+	font-weight: 700;
+	text-align: center;
+}
+
+#market-report-view .forecast-legend {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	margin-bottom: 20px;
+}
+
+#market-report-view .legend-dot.pending {
+	background: #0049C6;
+}
+
+#market-report-view .legend-dot.signed {
+	background: linear-gradient(135deg, #FFB7F5 0%, #6C5DD3 100%);
+}
+
+#market-report-view .legend-dot.lost {
+	background: #0049C6;
+}
+
+#market-report-view .forecast-dropdown {
+	position: absolute;
+	top: 10px;
+	right: 180px;
+	width: 150px;
+	background: #FFFFFF;
+	border: 1px solid #E6E8F0;
+	border-radius: 8px;
+	box-shadow: 0px 8px 16px rgba(143, 149, 178, 0.15);
+	z-index: 10;
+}
+
+#market-report-view .dropdown-menu {
+	padding: 4px 0;
+}
+
+#market-report-view .dropdown-item {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	padding: 8px 16px;
+	cursor: pointer;
+	transition: background-color 0.2s;
+}
+
+#market-report-view .dropdown-item:hover {
+	background: #F7F9FF;
+}
+
+#market-report-view .dropdown-item img {
+	width: 18px;
+	height: 18px;
+}
+
+#market-report-view .dropdown-item span {
+	font-size: 14px;
+	color: #8F95B2;
+}
+
+#market-report-view .dropdown-item:last-child span {
+	color: #FF754C;
+}
+
+/* 文化适配建议卡片样式 */
+#market-report-view .culture-content {
+	padding: 20px 14px 20px 14px;
+	display: flex;
+	flex-direction: column;
+	gap: 0;
+	overflow: visible;
+}
+
+#market-report-view .country-item {
+	display: flex;
+	align-items: center;
+	gap: 37px;
+	padding: 20px;
+	background: #fff;
+	border-radius: 8px;
+	box-shadow: 0px 8px 16px 0px rgba(143, 149, 178, 0.15);
+	position: relative;
+	margin-bottom: 0;
+	width: 1029px;
+	height: 65px;
+	border-radius: 8px 8px 8px 8px;
+}
+
+#market-report-view .country-item.malaysia {
+	background: #fff;
+}
+
+#market-report-view .country-item.singapore {
+	background: #FAFBFF;
+}
+
+#market-report-view .country-item.thailand {
+	background: #FAFBFF;
+}
+
+#market-report-view .country-item.indonesia {
+	background: #FAFBFF;
+}
+
+#market-report-view .country-color-bar {
+	width: 7px;
+	height: 65px;
+	border-radius: 8px 8px 8px 8px;
+}
+
+#market-report-view .country-item.malaysia .country-color-bar {
+	background: #6C5DD3;
+}
+
+#market-report-view .country-item.singapore .country-color-bar {
+	background: #FFCE73;
+}
+
+#market-report-view .country-item.thailand .country-color-bar {
+	background: #FFB7F5;
+}
+
+#market-report-view .country-item.indonesia .country-color-bar {
+	background: #FD6A6A;
+}
+
+#market-report-view .country-info {
+	display: flex;
+	flex-direction: column;
+	gap: 0;
+	min-width: 94px;
+	height: 40px;
+}
+
+#market-report-view .country-name {
+	font-weight: 700;
+	font-size: 14px;
+	color: #000;
+	line-height: 1.4;
+	margin-bottom: 4px;
+}
+
+#market-report-view .country-action {
+	font-size: 12px;
+	color: #8F95B2;
+	margin-bottom: 4px;
+}
+
+#market-report-view .country-divider {
+	width: 100%;
+	height: 1px;
+	background: #E6E8F0;
+}
+
+#market-report-view .culture-tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 4px;
+	flex: 1;
+	align-items: center;
+}
+
+#market-report-view .tag {
+	padding: 2px 6px;
+	background: transparent;
+	border-radius: 4px;
+	font-size: 12px;
+	font-weight: 700;
+	color: #718096;
+	border: none;
+	white-space: nowrap;
+}
+
+#market-report-view .country-dots {
+	display: flex;
+	gap: 4px;
+	align-items: center;
+}
+
+#market-report-view .country-dots .dot {
+	width: 3.2px;
+	height: 3.2px;
+	background: #fff;
+	border-radius: 50%;
+}
+
+#market-report-view .country-item.add-new {
+	background: #E9DAFD;
+	border: 2px solid #9747FF;
+	justify-content: center;
+	padding: 14px;
+	width: 1029px;
+	height: 65px;
+}
+
+#market-report-view .add-content {
+	display: flex;
+	align-items: center;
+	gap: 28px;
+}
+
+#market-report-view .add-icon {
+	width: 20px;
+	height: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#market-report-view .add-text {
+	font-weight: 700;
+	font-size: 16px;
+	color: #9747FF;
+	line-height: 1.25;
+}
+
+#market-report-view .add-divider {
+	width: 1px;
+	height: 37px;
+	background: #E9DAFD;
+}
+

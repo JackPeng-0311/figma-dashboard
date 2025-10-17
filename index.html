@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数据看板 - 历史方案对比</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="images/logo.svg" alt="Logo">
+            </div>
+            <nav>
+                <ul class="nav">
+                    <li class="menu-item open">
+                        <div class="menu-item-header">
+                            <div class="menu-item-icon">
+                                <img src="./images/icon-dashboard-figma.svg" alt="">
+                            </div>
+                            <span class="menu-item-text">数据看板</span>
+                            <div class="menu-item-arrow">
+                                <img src="./images/arrow-down.svg" alt="">
+                            </div>
+                        </div>
+                        <ul class="sub-menu">
+                            <li><a href="#real-time">实时数据</a></li>
+                            <li><a href="#comparison" class="active">历史方案对比</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <div class="menu-item-header">
+                            <div class="menu-item-icon"><img src="./images/icon-market.svg" alt=""></div>
+                            <span class="menu-item-text">市场洞察</span>
+                            <div class="menu-item-arrow"><img src="./images/arrow-down.svg" alt=""></div>
+                        </div>
+                        <ul class="sub-menu">
+                            <li><a href="#" data-view="market-report">市场报告生成</a></li>
+                            <li><a href="#" data-view="market-size-chart">市场规模图表</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <div class="menu-item-header" data-view="marketing-plan">
+                            <div class="menu-item-icon"><img src="./images/icon-marketing.svg" alt=""></div>
+                            <span class="menu-item-text">营销方案生成</span>
+                        </div>
+                    </li>
+                    <li class="menu-item">
+                        <div class="menu-item-header">
+                            <div class="menu-item-icon"><img src="./images/icon-consultant.svg" alt=""></div>
+                            <span class="menu-item-text">联系顾问</span>
+                            <div class="menu-item-arrow"><img src="./images/arrow-down.svg" alt=""></div>
+                        </div>
+                        <div class="sub-menu">
+                            <a href="#" class="sub-menu-item" data-view="find-consultant">寻找顾问</a>
+                            <a href="#" class="sub-menu-item" data-view="my-consultant">我的顾问</a>
+                        </div>
+                    </li>
+                    <li class="menu-item">
+                        <div class="menu-item-header">
+                            <div class="menu-item-icon"><img src="./images/icon-case.svg" alt=""></div>
+                            <span class="menu-item-text">案例库</span>
+                            <div class="menu-item-arrow"><img src="./images/arrow-down.svg" alt=""></div>
+                        </div>
+                        <div class="sub-menu">
+                            <a href="#" class="sub-menu-item" data-view="case-report">"无锡·东盟"专项报告</a>
+                            <a href="#" class="sub-menu-item" data-view="overseas-cases">苏南企业出海案例库</a>
+                        </div>
+                    </li>
+                     <li class="menu-item">
+                        <div class="menu-item-header">
+                            <div class="menu-item-icon"><img src="./images/icon-detection.svg" alt=""></div>
+                            <span class="menu-item-text">检测中心</span>
+                            <div class="menu-item-arrow"><img src="./images/arrow-down.svg" alt=""></div>
+                        </div>
+                        <div class="sub-menu">
+                            <a href="#" class="sub-menu-item" data-view="hash-value">内容哈希值</a>
+                            <a href="#" class="sub-menu-item" data-view="cultural-adaptation">文化适配检测</a>
+                        </div>
+                    </li>
+                    <li class="menu-item">
+                        <div class="menu-item-header" data-view="help-center">
+                            <div class="menu-item-icon"><img src="./images/icon-help.svg" alt=""></div>
+                            <span class="menu-item-text">帮助中心</span>
+                            <div class="menu-item-arrow"><img src="./images/arrow-down.svg" alt=""></div>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="pro-ad">
+                    <h4>升级至PRO以获取<br>访问所有功能！</h4>
+                    <button class="button-primary">立即获取专业版</button>
+                </div>
+                <div class="user-profile">
+                    <img src="images/avatar.png" alt="User Avatar" class="avatar">
+                    <div class="user-details">
+                        <span class="user-name">黄凡</span>
+                        <span class="user-company">思渺企业</span>
+                    </div>
+                    <img src="images/arrow-more.svg" alt="More options" class="arrow">
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="main-header">
+                <div class="greeting">
+                    <h1>Hi 黄凡,</h1>
+                    <h2>欢迎回来 👋</h2>
+                </div>
+                <div class="header-actions">
+                    <div class="search-bar">
+                        <img src="images/icon-search.svg" alt="Search Icon">
+                        <span>搜索</span>
+                    </div>
+                    <div class="notifications">
+                        <img src="images/icon-bell.svg" alt="Notifications">
+                        <span class="notification-badge">2</span>
+                    </div>
+                </div>
+            </header>
+
+            <section id="comparison-view">
+                <div class="comparison-stats-grid">
+                    <div class="comparison-card conversion-card">
+                        <div class="card-icon-bg">
+                            <img src="./images/icon-conversion-pink.svg" alt="Conversion Icon">
+                        </div>
+                        <div class="card-info">
+                            <p class="card-title">转化率</p>
+                            <p class="card-subtitle">conversion</p>
+                        </div>
+                        <div class="card-value-info">
+                            <p class="card-main-value">82.8%</p>
+                            <div class="card-trend">
+                                <img src="./images/arrow-up-blue.svg" alt="Up arrow">
+                                <span class="trend-value-up">23%</span>
+                                <span class="trend-period">本周</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comparison-card applause-card">
+                        <div class="card-icon-bg">
+                            <img src="./images/icon-like.png" alt="Like Icon">
+                        </div>
+                        <div class="card-info">
+                            <p class="card-title">好评率</p>
+                            <p class="card-subtitle">applause</p>
+                        </div>
+                        <div class="card-value-info">
+                            <p class="card-main-value">60.2%</p>
+                            <div class="card-trend">
+                                <img src="./images/arrow-up-blue.svg" alt="Up arrow">
+                                <span class="trend-value-up">23%</span>
+                                <span class="trend-period">本周</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comparison-card repurchase-card">
+                        <div class="card-icon-bg">
+                            <img src="./images/icon-buy.png" alt="Buy Icon">
+                        </div>
+                        <div class="card-info">
+                            <p class="card-title">复购率</p>
+                            <p class="card-subtitle">repurchase</p>
+                        </div>
+                        <div class="card-value-info">
+                            <p class="card-main-value">20.6%</p>
+                            <div class="card-trend">
+                                <img src="./images/arrow-up-blue.svg" alt="Up arrow">
+                                <span class="trend-value-up">23%</span>
+                                <span class="trend-period">本周</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comparison-card views-card">
+                        <div class="card-icon-bg">
+                            <img src="./images/icon-eye.png" alt="Eye Icon">
+                        </div>
+                        <div class="card-info">
+                            <p class="card-title">总浏览量</p>
+                            <p class="card-subtitle">views</p>
+                        </div>
+                        <div class="card-value-info">
+                            <p class="card-main-value">745.1k</p>
+                            <div class="card-trend">
+                                <img src="./images/arrow-up-blue.svg" alt="Up arrow">
+                                <span class="trend-value-up">23%</span>
+                                <span class="trend-period">本周</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- 使用Figma导出的完整"总数据统计"区域SVG -->
+                <div class="total-data-statistics-container">
+                    <img src="./images/total-data-statistics-complete.svg" alt="总数据统计完整区域" class="total-data-statistics-image">
+                </div>
+
+                
+            </section>
+            
+            <section id="real-time-view" class="hidden">
+                 <div class="stats-grid">
+                    <div class="card card-stat grid-item-1">
+                        <div class="card-header">
+                            <div class="icon-bg" style="background-color: #E7FAFF;"><img src="images/icon-clicks.svg" alt=""></div>
+                            <div class="stat-change">
+                                 <img src="images/arrow-up-green.svg" alt="Up">
+                                <span>23%</span>
+                                <span>本周</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-title">今日点击率</p>
+                            <p class="card-value">4,423</p>
+                        </div>
+                    </div>
+                    <div class="card card-stat grid-item-2">
+                        <div class="card-header">
+                            <div class="icon-bg" style="background-color: #FFEBF6;"><img src="images/icon-sales.svg" alt=""></div>
+                            <div class="stat-change">
+                                 <img src="images/arrow-up-green.svg" alt="Up">
+                                <span>14%</span>
+                                <span>本周</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-title">全部销售额</p>
+                            <p class="card-value">$322k</p>
+                        </div>
+                    </div>
+                    <div class="card card-stat grid-item-3">
+                        <div class="card-header">
+                            <div class="icon-bg" style="background-color: #FFF3DC;"><img src="images/icon-impressions.svg" alt=""></div>
+                             <div class="stat-change">
+                                 <img src="images/arrow-up-green.svg" alt="Up">
+                                <span>28%</span>
+                                 <span>本周</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-title">今日曝光量</p>
+                            <p class="card-value">14,243</p>
+                        </div>
+                    </div>
+                     <div class="card card-stat grid-item-4">
+                        <div class="card-header">
+                            <div class="icon-bg" style="background-color: rgba(108, 93, 211, 0.1);"><img src="images/icon-conversion.svg" alt=""></div>
+                            <div class="stat-change negative">
+                                 <img src="images/arrow-down-red.svg" alt="Down">
+                                <span>10%</span>
+                                 <span>本周</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-title">转化率</p>
+                            <p class="card-value">16%</p>
+                        </div>
+                    </div>
+                    <div class="card card-heatmap grid-item-5">
+                        <div class="card-header">
+                            <h3>地域分布热力图</h3>
+                            <div class="heatmap-controls">
+                                <button class="download-report">
+                                    下载报告 <img src="images/icon-download.svg" alt="">
+                                </button>
+                                <div class="date-picker">
+                                    显示： <img src="images/icon-calendar.svg" alt=""> 2024年3月1日至15日 <img src="images/arrow-down-simple.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                             <img class="heatmap-image" src="images/heatmap.png" alt="Heatmap">
+                        </div>
+                    </div>
+                    <div class="card card-graph grid-item-6">
+                        <div class="card-header">
+                            <div class="icon-bg" style="background-color: #CDF4FF;"><img src="images/icon-orders.svg" alt=""></div>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-title">订单总数</p>
+                            <p class="card-value">11,340</p>
+                        </div>
+                        <div class="card-footer">
+                            <img src="images/graph-blue.svg" alt="Blue graph">
+                            <span>较上个月增长8%</span>
+                        </div>
+                    </div>
+                    <div class="card card-graph grid-item-7">
+                        <div class="card-header">
+                            <div class="icon-bg" style="background-color: rgba(108, 93, 211, 0.1);"><img src="images/icon-fans.svg" alt=""></div>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-title">粉丝量</p>
+                            <p class="card-value">248</p>
+                        </div>
+                        <div class="card-footer">
+                            <img src="images/graph-purple.svg" alt="Purple graph">
+                            <span>环比增长9.2%</span>
+                        </div>
+                    </div>
+                    <div class="card card-chart grid-item-8">
+                        <div class="card-header">
+                            <div class="icon-bg" style="background-color: #FFF3DC;"><img src="images/icon-revenue.svg" alt=""></div>
+                             <div class="stat-change">
+                                 <span>本月</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="revenue-info">
+                                <p class="card-title">总收入</p>
+                                <p class="card-value">120K</p>
+                                <p class="update-time">上次更新是昨天</p>
+                            </div>
+                            <div class="bar-chart">
+                               <img src="images/bar-chart.svg" alt="Bar Chart">
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <span>增长53%</span>
+                        </div>
+                    </div>
+                     <div class="card card-customer-list grid-item-9">
+                        <h3 class="card-title">客户列表</h3>
+                        <ul>
+                            <li>
+                                <img src="images/Ellipse 3.png" alt="Ellipse 3">
+                                <div class="customer-info">
+                                    <span class="name">蔡徐坤</span>
+                                    <span class="email">kun@gmail.com</span>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="images/Ellipse 4.png" alt="Ellipse 4">
+                                <div class="customer-info">
+                                    <span class="name">范丞丞</span>
+                                    <span class="email">cheng@gmail.com</span>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="images/Ellipse 5.png" alt="Ellipse 5">
+                                <div class="customer-info">
+                                    <span class="name">陈立农</span>
+                                    <span class="email">nong@gmail.com</span>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="images/Ellipse 6.png" alt="Ellipse 6">
+                                <div class="customer-info">
+                                    <span class="name">黄明昊</span>
+                                    <span class="email">hao@gmail.com</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card card-product-sales grid-item-10">
+                         <h3 class="card-title">产品销售额</h3>
+                         <table>
+                             <thead>
+                                <tr>
+                                    <th>产品名称 <img src="images/icon-sort.svg" alt="sort"></th>
+                                    <th>销售额 <img src="images/icon-sort.svg" alt="sort"></th>
+                                    <th>库存 <img src="images/icon-sort.svg" alt="sort"></th>
+                                    <th>金额 <img src="images/icon-sort.svg" alt="sort"></th>
+                                    <th>库存状态</th>
+                                </tr>
+                             </thead>
+                             <tbody>
+                                <tr>
+                                    <td>太湖翠竹茶</td>
+                                    <td>453</td>
+                                    <td>445</td>
+                                    <td>$245</td>
+                                    <td><span class="status in-stock">有库存</span></td>
+                                </tr>
+                                 <tr>
+                                    <td>阳山水蜜桃</td>
+                                    <td>453</td>
+                                    <td>445</td>
+                                    <td>$245</td>
+                                    <td><span class="status out-of-stock">库存用完</span></td>
+                                </tr>
+                                 <tr>
+                                    <td>宜兴紫砂</td>
+                                    <td>453</td>
+                                    <td>445</td>
+                                    <td>$245</td>
+                                    <td><span class="status in-stock">有库存</span></td>
+                                </tr>
+                             </tbody>
+                         </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 市场报告视图 -->
+            <section id="market-report-view" class="content-view hidden">
+                <div class="market-report-complete-container">
+                    <img src="./images/market-report-complete.svg" alt="市场报告生成完整页面" class="market-report-complete-svg">
+                </div>
+            </section>
+
+            <!-- 市场规模图表视图 -->
+            <section id="market-size-chart-view" class="content-view hidden">
+                <div class="market-size-charts">
+                    <!-- 市场分布图表 -->
+                    <div class="chart-card market-distribution">
+                        <img src="./images/market-distribution-chart.svg" alt="市场分布图表" class="chart-image">
+                    </div>
+
+                    <!-- 用户规模图表 -->
+                    <div class="chart-card user-scale">
+                        <img src="./images/user-scale-chart.svg" alt="用户规模图表" class="chart-image">
+                    </div>
+
+                    <!-- 流量来源 -->
+                    <div class="chart-card traffic-sources">
+                        <img src="./images/traffic-sources.svg" alt="流量来源" class="chart-image">
+                    </div>
+
+                    <!-- 用户统计 -->
+                    <div class="chart-card user-stats">
+                        <img src="./images/user-stats.svg" alt="用户统计" class="chart-image">
+                    </div>
+
+                    <!-- 用户性别分布 -->
+                    <div class="chart-card user-gender">
+                        <img src="./images/user-gender-distribution.svg" alt="用户性别分布" class="chart-image">
+                    </div>
+
+                    <!-- 卖家分布 -->
+                    <div class="chart-card seller-distribution">
+                        <img src="./images/seller-distribution.svg" alt="卖家分布" class="chart-image">
+                    </div>
+
+                    <!-- 热门咨询师 -->
+                    <div class="chart-card popular-consultants">
+                        <img src="./images/popular-consultants.svg" alt="热门咨询师" class="chart-image">
+                    </div>
+                </div>
+            </section>
+
+            <!-- 营销方案生成视图 -->
+            <section id="marketing-plan-view" class="content-view hidden">
+                <div class="marketing-plan-container">
+                    <!-- 行1左侧：预算设置+渠道选择组合 -->
+                    <div class="marketing-card row1-left-card">
+                        <img src="./images/budget-settings-complete.svg" alt="预算设置+渠道选择" class="marketing-image">
+                    </div>
+
+                    <!-- 行1右侧：预算分配图 -->
+                    <div class="marketing-card row1-right-card">
+                        <img src="./images/budget-allocation-chart.svg" alt="预算分配图" class="marketing-image">
+                    </div>
+
+                    <!-- 行2全部：全案生成 -->
+                    <div class="marketing-card row2-full-card">
+                        <img src="./images/full-case-generation.svg" alt="全案生成" class="marketing-image">
+                    </div>
+                </div>
+            </section>
+
+      <!-- 寻找顾问视图 -->
+            <section id="find-consultant-view" class="content-view hidden">
+                <div class="find-consultant-container">
+                    <!-- 主要内容区域 -->
+                    <div class="find-consultant-main">
+                        <!-- 顶部固定：输入区域（从滚动容器中抽出） -->
+                        <div class="consultant-input-card">
+                            <img src="./images/find-consultant-main-content.svg" alt="寻找顾问输入区域" class="consultant-input-image">
+                        </div>
+                        <!-- 下方可滚动内容 -->
+                        <div class="find-consultant-main-scroll">
+                            <div class="consultant-feed-card">
+                                <img src="./images/consultant-feed-card.svg" alt="顾问动态内容" class="consultant-feed-image">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 右侧建议区域 -->
+                    <div class="find-consultant-sidebar">
+                        <!-- 顶部固定：生日提醒（从滚动容器中抽出） -->
+                        <div class="birthday-banner">
+                            <img src="./images/birthday-banner.svg" alt="张哆啦今天生日" class="birthday-image">
+                        </div>
+                        <!-- 下方可滚动内容 -->
+                        <div class="find-consultant-sidebar-scroll">
+                            <div class="consultant-suggestions">
+                                <img src="./images/consultant-suggestions.svg" alt="推荐顾问" class="suggestions-image">
+                            </div>
+                            <div class="consultant-interests">
+                                <img src="./images/consultant-interests.svg" alt="兴趣推荐" class="interests-image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+      <!-- 我的顾问视图 -->
+      <section id="my-consultant-view" class="content-view hidden">
+          <div class="my-consultant-container">
+              <!-- 左侧联系人列表 -->
+              <div class="consultant-list-panel">
+                  <img src="./images/my-consultant-chat-list.svg" alt="联系人列表" class="chat-list-image">
+                  <!-- 透明的可点击区域覆盖层 -->
+                  <div class="contact-click-overlay">
+                      <div class="contact-item" data-contact="julia" data-x="20" data-y="120" data-width="365" data-height="80"></div>
+                      <div class="contact-item" data-contact="jiajian" data-x="20" data-y="220" data-width="365" data-height="80"></div>
+                  </div>
+              </div>
+              
+              <!-- 右侧聊天窗口 -->
+              <div class="consultant-chat-panel">
+                  <!-- 茱莉亚的聊天窗口 -->
+                  <img src="./images/julia-chat-window.svg" alt="茱莉亚聊天窗口" class="chat-window-image julia-chat" style="display: none;">
+                  
+                  <!-- 贾剑锋的聊天窗口 -->
+                  <img src="./images/my-consultant-chat-window.svg" alt="贾剑锋聊天窗口" class="chat-window-image jiajian-chat" style="display: block;">
+              </div>
+          </div>
+      </section>
+
+      <!-- 案例库视图 -->
+      <section id="case-library-view" class="content-view hidden">
+          <div class="case-library-container">
+              <img src="./images/case-library-content.svg" alt="案例库页面" class="case-library-image">
+                </div>
+            </section>
+
+      <!-- 出海案例库视图 -->
+      <section id="overseas-cases-view" class="content-view hidden">
+          <div class="overseas-cases-container">
+              <!-- 页面头部区域 -->
+              <div class="overseas-cases-header">
+                  <h1 class="overseas-cases-title">苏南企业出海案例库</h1>
+                  <div class="overseas-cases-subtitle">探索成功出海企业的经验与策略</div>
+              </div>
+              
+              <!-- 搜索和筛选区域 -->
+              <div class="overseas-cases-filters">
+                  <div class="search-box">
+                      <input type="text" placeholder="搜索企业名称、行业或地区..." class="search-input">
+                      <button class="search-button">
+                          <img src="./images/icon-search.svg" alt="搜索">
+                      </button>
+                  </div>
+                  <div class="filter-tabs">
+                      <button class="filter-tab active">全部</button>
+                      <button class="filter-tab">制造业</button>
+                      <button class="filter-tab">科技</button>
+                      <button class="filter-tab">服务业</button>
+                      <button class="filter-tab">贸易</button>
+                  </div>
+              </div>
+              
+              <!-- 企业案例列表 -->
+              <div class="overseas-cases-grid">
+                  <!-- 企业案例卡片1 -->
+                  <div class="company-card">
+                      <div class="company-header">
+                          <div class="company-avatar">
+                              <img src="./images/avatar.png" alt="企业头像" class="avatar-image">
+                          </div>
+                          <div class="company-info">
+                              <h3 class="company-name">苏州智能制造有限公司</h3>
+                              <p class="company-industry">制造业 · 德国市场</p>
+                          </div>
+                          <div class="company-status success">成功案例</div>
+                      </div>
+                      <div class="company-stats">
+                          <div class="stat-item">
+                              <span class="stat-label">投资金额</span>
+                              <span class="stat-value">$2.5M</span>
+                          </div>
+                          <div class="stat-item">
+                              <span class="stat-label">员工数量</span>
+                              <span class="stat-value">150人</span>
+                          </div>
+                          <div class="stat-item">
+                              <span class="stat-label">年营收</span>
+                              <span class="stat-value">$8.2M</span>
+                          </div>
+                      </div>
+                      <div class="company-description">
+                          <p>专注于智能制造设备的研发与生产，通过技术创新成功进入德国高端制造业市场，成为当地知名供应商。</p>
+                      </div>
+                      <div class="company-tags">
+                          <span class="tag">智能制造</span>
+                          <span class="tag">技术创新</span>
+                          <span class="tag">德国市场</span>
+                      </div>
+                  </div>
+                  
+                  <!-- 企业案例卡片2 -->
+                  <div class="company-card">
+                      <div class="company-header">
+                          <div class="company-avatar">
+                              <img src="./images/avatar-2.png" alt="企业头像" class="avatar-image">
+                          </div>
+                          <div class="company-info">
+                              <h3 class="company-name">无锡新能源科技</h3>
+                              <p class="company-industry">新能源 · 东南亚市场</p>
+                          </div>
+                          <div class="company-status success">成功案例</div>
+                      </div>
+                      <div class="company-stats">
+                          <div class="stat-item">
+                              <span class="stat-label">投资金额</span>
+                              <span class="stat-value">$1.8M</span>
+                          </div>
+                          <div class="stat-item">
+                              <span class="stat-label">员工数量</span>
+                              <span class="stat-value">120人</span>
+                          </div>
+                          <div class="stat-item">
+                              <span class="stat-label">年营收</span>
+                              <span class="stat-value">$5.6M</span>
+                          </div>
+                      </div>
+                      <div class="company-description">
+                          <p>专注于太阳能和风能技术的开发，在东南亚多个国家建立了生产基地，成为该地区领先的可再生能源解决方案提供商。</p>
+                      </div>
+                      <div class="company-tags">
+                          <span class="tag">新能源</span>
+                          <span class="tag">环保技术</span>
+                          <span class="tag">东南亚</span>
+                      </div>
+                  </div>
+                  
+                  <!-- 企业案例卡片3 -->
+                  <div class="company-card">
+                      <div class="company-header">
+                          <div class="company-avatar">
+                              <img src="./images/avatar.png" alt="企业头像" class="avatar-image">
+                          </div>
+                          <div class="company-info">
+                              <h3 class="company-name">常州生物医药</h3>
+                              <p class="company-industry">生物医药 · 美国市场</p>
+                          </div>
+                          <div class="company-status success">成功案例</div>
+                      </div>
+                      <div class="company-stats">
+                          <div class="stat-item">
+                              <span class="stat-label">投资金额</span>
+                              <span class="stat-value">$3.2M</span>
+                          </div>
+                          <div class="stat-item">
+                              <span class="stat-label">员工数量</span>
+                              <span class="stat-value">200人</span>
+                          </div>
+                          <div class="stat-item">
+                              <span class="stat-label">年营收</span>
+                              <span class="stat-value">$12.1M</span>
+                          </div>
+                      </div>
+                      <div class="company-description">
+                          <p>专注于创新药物的研发和生产，通过FDA认证成功进入美国市场，建立了完整的研发和销售网络。</p>
+                      </div>
+                      <div class="company-tags">
+                          <span class="tag">生物医药</span>
+                          <span class="tag">FDA认证</span>
+                          <span class="tag">美国市场</span>
+                      </div>
+                  </div>
+                  
+                  <!-- 企业案例卡片4 -->
+                  <div class="company-card">
+                      <div class="company-header">
+                          <div class="company-avatar">
+                              <img src="./images/avatar-2.png" alt="企业头像" class="avatar-image">
+                          </div>
+                          <div class="company-info">
+                              <h3 class="company-name">南京软件科技</h3>
+                              <p class="company-industry">软件服务 · 欧洲市场</p>
+                          </div>
+                          <div class="company-status success">成功案例</div>
+                      </div>
+                      <div class="company-stats">
+                          <div class="stat-item">
+                              <span class="stat-label">投资金额</span>
+                              <span class="stat-value">$1.5M</span>
+                          </div>
+                          <div class="stat-item">
+                              <span class="stat-label">员工数量</span>
+                              <span class="stat-value">80人</span>
+                          </div>
+                          <div class="stat-item">
+                              <span class="stat-label">年营收</span>
+                              <span class="stat-value">$4.8M</span>
+                          </div>
+                      </div>
+                      <div class="company-description">
+                          <p>提供企业级软件解决方案，在欧洲多个国家建立了分支机构，为当地企业提供数字化转型服务。</p>
+                      </div>
+                      <div class="company-tags">
+                          <span class="tag">软件服务</span>
+                          <span class="tag">数字化转型</span>
+                          <span class="tag">欧洲市场</span>
+                      </div>
+                  </div>
+                  
+                  <!-- 企业案例卡片5 -->
+                  <div class="company-card">
+                      <div class="company-header">
+                          <div class="company-avatar">
+                              <img src="./images/avatar.png" alt="企业头像" class="avatar-image">
+                          </div>
+                          <div class="company-info">
+                              <h3 class="company-name">镇江食品加工</h3>
+                              <p class="company-industry">食品加工 · 日本市场</p>
+                          </div>
+                          <div class="company-status success">成功案例</div>
+                      </div>
+                      <div class="company-stats">
+                          <div class="stat-item">
+                              <span class="stat-label">投资金额</span>
+                              <span class="stat-value">$2.1M</span>
+                          </div>
+                          <div class="stat-item">
+                              <span class="stat-label">员工数量</span>
+                              <span class="stat-value">180人</span>
+                          </div>
+                          <div class="stat-item">
+                              <span class="stat-label">年营收</span>
+                              <span class="stat-value">$6.9M</span>
+                          </div>
+                      </div>
+                      <div class="company-description">
+                          <p>专注于高端食品加工和包装技术，通过严格的品质控制成功进入日本市场，成为当地知名食品供应商。</p>
+                      </div>
+                      <div class="company-tags">
+                          <span class="tag">食品加工</span>
+                          <span class="tag">品质控制</span>
+                          <span class="tag">日本市场</span>
+                      </div>
+                  </div>
+                  
+                  <!-- 企业案例卡片6 -->
+                  <div class="company-card">
+                      <div class="company-header">
+                          <div class="company-avatar">
+                              <img src="./images/avatar-2.png" alt="企业头像" class="avatar-image">
+                          </div>
+                          <div class="company-info">
+                              <h3 class="company-name">扬州纺织集团</h3>
+                              <p class="company-industry">纺织制造 · 非洲市场</p>
+                          </div>
+                          <div class="company-status success">成功案例</div>
+                      </div>
+                      <div class="company-stats">
+                          <div class="stat-item">
+                              <span class="stat-label">投资金额</span>
+                              <span class="stat-value">$3.8M</span>
+                          </div>
+                          <div class="stat-item">
+                              <span class="stat-label">员工数量</span>
+                              <span class="stat-value">320人</span>
+                          </div>
+                          <div class="stat-item">
+                              <span class="stat-label">年营收</span>
+                              <span class="stat-value">$15.2M</span>
+                          </div>
+                      </div>
+                      <div class="company-description">
+                          <p>传统纺织制造业的转型升级典范，在非洲建立了完整的产业链，为当地提供了大量就业机会。</p>
+                      </div>
+                      <div class="company-tags">
+                          <span class="tag">纺织制造</span>
+                          <span class="tag">转型升级</span>
+                          <span class="tag">非洲市场</span>
+                      </div>
+                  </div>
+              </div>
+              
+              <!-- 分页控件 -->
+              <div class="overseas-cases-pagination">
+                  <button class="pagination-btn prev" disabled>上一页</button>
+                  <div class="pagination-numbers">
+                      <button class="pagination-number active">1</button>
+                      <button class="pagination-number">2</button>
+                      <button class="pagination-number">3</button>
+                      <span class="pagination-dots">...</span>
+                      <button class="pagination-number">10</button>
+                  </div>
+                  <button class="pagination-btn next">下一页</button>
+              </div>
+          </div>
+      </section>
+
+      <!-- 哈希值页面视图 -->
+      <section id="hash-value-view" class="content-view hidden">
+          <div class="hash-value-container">
+              <!-- 使用Figma设计稿的静态SVG，100%高质量还原 -->
+              <!-- 左上：哈希值生成（包装容器，便于交互覆盖） -->
+              <div class="hash-generation-wrapper">
+              <img src="./images/hash-generation-detailed.svg" alt="哈希值生成" class="hash-generation-svg">
+                  <!-- 覆盖点击区域：定位到加号上传框 -->
+                  <div class="hash-upload-click" id="hash-upload-click"></div>
+                  <!-- 覆盖点击区域：定位到“哈希值生成”按钮 -->
+                  <div class="hash-generate-btn" id="hash-generate-btn"></div>
+              </div>
+              <!-- 左下：哈希值检验（包装容器，便于交互覆盖） -->
+              <div class="hash-verification-wrapper">
+              <img src="./images/hash-verification-detailed.svg" alt="哈希值检验" class="hash-verification-svg">
+                  <div class="hash-verify-click" id="hash-verify-click"></div>
+              </div>
+              <img src="./images/hash-result-generation-complete.svg" alt="生成结果" class="hash-result-generation-svg">
+              <img src="./images/hash-result-verification-complete.svg" alt="检验结果" class="hash-result-verification-svg">
+          </div>
+      </section>
+
+    <!-- 文化适配检测页面视图 -->
+    <section id="cultural-adaptation-view" class="content-view hidden">
+        <div class="cultural-adaptation-container">
+            <!-- 页面标题区域 -->
+            <div class="cultural-adaptation-header">
+                <div class="page-title-section">
+                    <div class="title-icon">
+                        <img src="./images/icon-detection.svg" alt="检测图标">
+                    </div>
+                    <h1 class="page-title">文化适配检测</h1>
+                </div>
+            </div>
+
+            <!-- 文件上传区域 -->
+            <div class="file-upload-section">
+                <div class="upload-container">
+                    <div class="upload-area" id="cultural-upload-area">
+                        <div class="upload-content">
+                            <div class="file-preview" id="file-preview">
+                                <img src="./images/avatar.png" alt="文件预览" class="preview-image">
+                                <div class="file-info">
+                                    <div class="file-name">印尼斋月营销海报(2024).jpg</div>
+                                    <div class="file-details">
+                                        <span class="file-source">来自'本地'文件</span>
+                                        <span class="file-size">32mb</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="upload-placeholder" id="upload-placeholder">
+                                <div class="upload-icon">
+                                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                        <path d="M16 2L16 30M2 16L30 16" stroke="#8F95B2" stroke-width="2" stroke-linecap="round"/>
+                                    </svg>
+                                </div>
+                                <p class="upload-text">点击上传文件或拖拽文件到此处</p>
+                                <p class="upload-hint">支持 JPG, PNG, PDF 格式，最大 50MB</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="upload-actions">
+                        <button class="btn-secondary" id="select-file-btn">从文件中选择</button>
+                        <button class="btn-primary" id="detect-btn">一键检测</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 检测结果区域 - 初始隐藏 -->
+            <div id="cultural-adaptation-results" class="cultural-results hidden">
+                <!-- 总体评分卡片 -->
+                <div class="result-card overall-score-card">
+                    <div class="card-header">
+                        <h3 class="card-title">总体评分</h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="score-overview">
+                            <div class="current-score">
+                                <span class="score-label">当前适配度</span>
+                                <span class="score-value">73%</span>
+                            </div>
+                            <div class="target-score">
+                                <span class="score-label">目标适配度</span>
+                                <span class="score-value">98%</span>
+                            </div>
+                        </div>
+                        <div class="score-legend">
+                            <div class="legend-item">
+                                <div class="legend-dot qualified"></div>
+                                <span>合格</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-dot doubtful"></div>
+                                <span>存疑</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-dot conflict"></div>
+                                <span>冲突明显</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-dot accurate"></div>
+                                <span>精准</span>
+                            </div>
+                        </div>
+                        <div class="score-bars">
+                            <div class="score-bar-item">
+                                <div class="bar-label">语言与符号</div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 85%; background: linear-gradient(90deg, #3F8CFF 0%, #6C5DD3 100%);"></div>
+                                </div>
+                            </div>
+                            <div class="score-bar-item">
+                                <div class="bar-label">价值观念</div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 70%; background: linear-gradient(90deg, #FF754C 0%, #FFB7F5 100%);"></div>
+                                </div>
+                            </div>
+                            <div class="score-bar-item">
+                                <div class="bar-label">社会规范</div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 60%; background: linear-gradient(90deg, #FFCE73 0%, #FF754C 100%);"></div>
+                                </div>
+                            </div>
+                            <div class="score-bar-item">
+                                <div class="bar-label">审美认知</div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 75%; background: linear-gradient(90deg, #3F8CFF 0%, #A0D7E7 100%);"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 具体评分和AI建议区域 -->
+                <div class="results-grid">
+                    <!-- 具体评分卡片 -->
+                    <div class="result-card specific-score-card">
+                        <div class="card-header">
+                            <h3 class="card-title">具体评分</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="chart-container">
+                                <div class="chart-bars">
+                                    <div class="chart-bar" style="height: 60%;">
+                                        <span class="bar-value">60</span>
+                                        <span class="bar-label">价值</span>
+                                    </div>
+                                    <div class="chart-bar" style="height: 80%;">
+                                        <span class="bar-value">80</span>
+                                        <span class="bar-label">审美</span>
+                                    </div>
+                                    <div class="chart-bar" style="height: 70%;">
+                                        <span class="bar-value">70</span>
+                                        <span class="bar-label">规范</span>
+                                    </div>
+                                    <div class="chart-bar" style="height: 85%;">
+                                        <span class="bar-value">85</span>
+                                        <span class="bar-label">语言</span>
+                                    </div>
+                                    <div class="chart-bar" style="height: 75%;">
+                                        <span class="bar-value">75</span>
+                                        <span class="bar-label">符号</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- AI建议卡片 -->
+                    <div class="result-card ai-suggestions-card">
+                        <div class="card-header">
+                            <h3 class="card-title">获取AI建议</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="suggestions-list">
+                                <div class="suggestion-item">
+                                    <div class="suggestion-icon">~</div>
+                                    <span>语言符号</span>
+                                </div>
+                                <div class="suggestion-item">
+                                    <div class="suggestion-icon">~</div>
+                                    <span>价值观念</span>
+                                </div>
+                                <div class="suggestion-item">
+                                    <div class="suggestion-icon">~</div>
+                                    <span>社会规范</span>
+                                </div>
+                                <div class="suggestion-item">
+                                    <div class="suggestion-icon">~</div>
+                                    <span>审美认知</span>
+                                </div>
+                                <div class="suggestion-item more">
+                                    <span>...</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 寻找顾问卡片 -->
+                    <div class="result-card find-consultant-card">
+                        <div class="card-header">
+                            <h3 class="card-title">寻找合适的顾问</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="consultant-regions">
+                                <div class="region-item">
+                                    <div class="region-icon">~</div>
+                                    <span>马来西亚专区</span>
+                                </div>
+                                <div class="region-item">
+                                    <div class="region-icon">~</div>
+                                    <span>新加坡专区</span>
+                                </div>
+                                <div class="region-item">
+                                    <div class="region-icon">~</div>
+                                    <span>印度尼西亚专区</span>
+                                </div>
+                                <div class="region-item">
+                                    <div class="region-icon">~</div>
+                                    <span>泰国专区</span>
+                                </div>
+                                <div class="region-item more">
+                                    <span>...</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 帮助中心页面视图 -->
+    <section id="help-center-view" class="content-view hidden">
+        <div class="help-center-container">
+            <!-- 只复原标题+搜索框（按Figma坐标精确重现） -->
+            <svg class="help-center-svg" viewBox="0 0 1440 417" xmlns="http://www.w3.org/2000/svg" aria-label="帮助中心-标题与搜索">
+                <!-- 顶部浅灰背景条 -->
+                <rect x="0" y="0" width="1440" height="417" fill="#FAFAFA"/>
+
+                <!-- 标题：原点服务大厅，为您服务！ -->
+                <text x="720" y="120" width="480" fill="#111827"
+                      font-family="'Noto Sans SC', Arial, sans-serif"
+                      font-size="40" font-weight="500"
+                      text-anchor="middle">
+                    原点服务大厅，为您服务！
+                </text>
+
+                <!-- 搜索框容器 521×56，圆角12，居中于设计坐标 -->
+                <g transform="translate(459.5 160)">
+                    <rect x="0" y="0" width="521" height="56" rx="12" fill="#FFFFFF"/>
+                    <!-- 放大镜图标（24×24，内边距16） -->
+                    <g transform="translate(16 16)" stroke="#111827" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="9.5" cy="9.5" r="7.75"/>
+                        <path d="M16 16 L20.96 20.84"/>
+                    </g>
+                    <!-- 占位文案 -->
+                    <text x="52" y="32" fill="#A0AEC0" font-family="'Noto Sans SC', Arial, sans-serif" font-size="16">请输入您的问题...</text>
+                </g>
+            </svg>
+            
+            <!-- 操作指南 + 文化禁忌库 分区（6×卡片/分区） -->
+            <div class="help-sections" aria-label="帮助中心-功能区域">
+                <h2 class="section-title">操作指南</h2>
+                <div class="help-cards-grid">
+                    <!-- 顾问对接 -->
+                    <a class="help-card" href="#">
+                        <div class="card-icon">
+                            <img class="icon-default" src="./images/guide-consult-default.svg" alt="顾问对接 默认">
+                            <img class="icon-hover" src="./images/hover-1.svg" alt="顾问对接 悬停">
+                        </div>
+                        <div class="card-title">顾问对接</div>
+                        <div class="card-desc">按需选顾问、预约沟通方法。</div>
+                        <div class="card-meta"><span class="count">10</span> 篇文章</div>
+                    </a>
+                    <!-- 内容生成 -->
+                    <a class="help-card" href="#">
+                        <div class="card-icon">
+                            <img class="icon-default" src="./images/guide-content-default.svg" alt="内容生成 默认">
+                            <img class="icon-hover" src="./images/hover-2.svg" alt="内容生成 悬停">
+                        </div>
+                        <div class="card-title">内容生成</div>
+                        <div class="card-desc">了解AI工具操作、需求输入技巧。</div>
+                        <div class="card-meta"><span class="count">14</span> 篇文章</div>
+                    </a>
+                    <!-- 版权登记 -->
+                    <a class="help-card" href="#">
+                        <div class="card-icon">
+                            <img class="icon-default" src="./images/guide-copyright-default.svg" alt="版权登记 默认">
+                            <img class="icon-hover" src="./images/hover-3.svg" alt="版权登记 悬停">
+                        </div>
+                        <div class="card-title">版权登记</div>
+                        <div class="card-desc">哈希值生成、区块链存证流程。</div>
+                        <div class="card-meta"><span class="count">10</span> 篇文章</div>
+                    </a>
+                    <!-- 禁忌查询 -->
+                    <a class="help-card" href="#">
+                        <div class="card-icon">
+                            <img class="icon-default" src="./images/taboo-query-default.svg" alt="禁忌查询 默认">
+                            <img class="icon-hover" src="./images/hover-4.svg" alt="禁忌查询 悬停">
+                        </div>
+                        <div class="card-title">禁忌查询</div>
+                        <div class="card-desc">文化库检索、禁忌规避规则。</div>
+                        <div class="card-meta"><span class="count">20</span> 篇文章</div>
+                    </a>
+                    <!-- 数据追踪 -->
+                    <a class="help-card" href="#">
+                        <div class="card-icon">
+                            <img class="icon-default" src="./images/guide-tracking-default.svg" alt="数据追踪 默认">
+                            <img class="icon-hover" src="./images/hover-5.svg" alt="数据追踪 悬停">
+                        </div>
+                        <div class="card-title">数据追踪</div>
+                        <div class="card-desc">ROI查看、效果仪表盘使用。</div>
+                        <div class="card-meta"><span class="count">25</span> 篇文章</div>
+                    </a>
+                    <!-- 分发优化 -->
+                    <a class="help-card" href="#">
+                        <div class="card-icon">
+                            <img class="icon-default" src="./images/guide-distribution-default.svg" alt="分发优化 默认">
+                            <img class="icon-hover" src="./images/hover-6.svg" alt="分发优化 悬停">
+                        </div>
+                        <div class="card-title">分发优化</div>
+                        <div class="card-desc">多平台选择、投放策略调整。</div>
+                        <div class="card-meta"><span class="count">10</span> 篇文章</div>
+                    </a>
+                </div>
+
+                <h2 class="section-title">文化禁忌库</h2>
+                <div class="help-cards-grid">
+                    <!-- 颜色与符号 -->
+                    <a class="help-card" href="#">
+                        <div class="card-icon">
+                            <img class="icon-default" src="./images/taboo-color-default.svg" alt="颜色与符号 默认">
+                            <img class="icon-hover" src="./images/hover-11.svg" alt="颜色与符号 悬停">
+                        </div>
+                        <div class="card-title">颜色与符号</div>
+                        <div class="card-desc">不同文化的颜色象征与禁忌。</div>
+                        <div class="card-meta"><span class="count">8</span> 篇文章</div>
+                    </a>
+                    <!-- 宗教信仰 -->
+                    <a class="help-card" href="#">
+                        <div class="card-icon">
+                            <img class="icon-default" src="./images/taboo-religion-default.svg" alt="宗教信仰 默认">
+                            <img class="icon-hover" src="./images/hover-12.svg" alt="宗教信仰 悬停">
+                        </div>
+                        <div class="card-title">宗教信仰</div>
+                        <div class="card-desc">伊斯兰教、佛教、天主教。</div>
+                        <div class="card-meta"><span class="count">10</span> 篇文章</div>
+                    </a>
+                    <!-- 语言与俚语 -->
+                    <a class="help-card" href="#">
+                        <div class="card-icon">
+                            <img class="icon-default" src="./images/taboo-language-default.svg" alt="语言与俚语 默认">
+                            <img class="icon-hover" src="./images/hover-9.svg" alt="语言与俚语 悬停">
+                        </div>
+                        <div class="card-title">语言与俚语</div>
+                        <div class="card-desc">避免用语冒犯与误解。</div>
+                        <div class="card-meta"><span class="count">10</span> 篇文章</div>
+                    </a>
+                    <!-- 节日与习俗 -->
+                    <a class="help-card" href="#">
+                        <div class="card-icon">
+                            <img class="icon-default" src="./images/taboo-festival-default.svg" alt="节日与习俗 默认">
+                            <img class="icon-hover" src="./images/hover-7.svg" alt="节日与习俗 悬停">
+                        </div>
+                        <div class="card-title">节日与习俗</div>
+                        <div class="card-desc">日间进食、泼水节等注意。</div>
+                        <div class="card-meta"><span class="count">20</span> 篇文章</div>
+                    </a>
+                    <!-- 消费行为 -->
+                    <a class="help-card" href="#">
+                        <div class="card-icon">
+                            <img class="icon-default" src="./images/taboo-consume-default.svg" alt="消费行为 默认">
+                            <img class="icon-hover" src="./images/hover-8.svg" alt="消费行为 悬停">
+                        </div>
+                        <div class="card-title">消费行为</div>
+                        <div class="card-desc">现金或信用卡等偏好。</div>
+                        <div class="card-meta"><span class="count">25</span> 篇文章</div>
+                    </a>
+                    <!-- 数据追踪（ROI 查看） -->
+                    <a class="help-card" href="#">
+                        <div class="card-icon">
+                            <img class="icon-default" src="./images/guide-tracking-default.svg" alt="数据追踪 默认">
+                            <img class="icon-hover" src="./images/hover-5.svg" alt="数据追踪 悬停">
+                        </div>
+                        <div class="card-title">数据追踪</div>
+                        <div class="card-desc">ROI查看、效果仪表盘使用。</div>
+                        <div class="card-meta"><span class="count">25</span> 篇文章</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+        </main>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html> 

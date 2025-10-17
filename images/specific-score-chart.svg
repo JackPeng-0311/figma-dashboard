@@ -1,0 +1,96 @@
+<svg width="552" height="269" viewBox="0 0 552 269" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 主背景 -->
+  <rect x="16" y="8" width="520" height="237" rx="24" fill="#FFFFFF"/>
+  
+  <!-- 阴影效果 -->
+  <defs>
+    <filter id="shadow" x="0" y="0" width="552" height="269" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="rgba(143, 149, 178, 0.15)"/>
+    </filter>
+  </defs>
+  
+  <!-- 标题 -->
+  <text x="52.0317" y="41" font-family="Noto Sans SC" font-size="18" font-weight="700" fill="#081735">具体评分</text>
+  
+  <!-- 分隔线 -->
+  <line x1="17.0657" y1="48.3843" x2="536" y2="48.3843" stroke="#E6E8F0"/>
+  
+  <!-- 柱状图 -->
+  <g transform="translate(25.57, 69)">
+    <!-- 柱状图背景 -->
+    <rect x="0" y="0" width="454.78" height="126.48" rx="5.23" fill="#F8F9FA"/>
+    
+    <!-- 柱子 -->
+    <!-- 价值 -->
+    <rect x="16.7" y="88.84" width="24.35" height="37.62" rx="5.23" fill="#E6E8F0"/>
+    
+    <!-- 审美 -->
+    <rect x="55.68" y="34.36" width="24.35" height="92.1" rx="5.23" fill="#E6E8F0"/>
+    
+    <!-- 规范 -->
+    <rect x="94.66" y="62.9" width="24.35" height="63.56" rx="5.23" fill="url(#gradient1)"/>
+    
+    <!-- 审美2 -->
+    <rect x="133.64" y="82.02" width="24.51" height="43.66" rx="5.23" fill="#E6E8F0"/>
+    
+    <!-- 规范2 -->
+    <rect x="172.61" y="67.09" width="24.35" height="58.38" rx="5.23" fill="#E6E8F0"/>
+    
+    <!-- 符号 -->
+    <rect x="211.59" y="21.05" width="24.35" height="104.43" rx="5.23" fill="url(#gradient2)"/>
+    
+    <!-- 审美3 -->
+    <rect x="250.57" y="74.88" width="24.35" height="50.59" rx="5.23" fill="#E6E8F0"/>
+    
+    <!-- 语言 -->
+    <rect x="328.52" y="34.36" width="24.35" height="92.1" rx="5.23" fill="url(#gradient3)"/>
+    
+    <!-- 规范3 -->
+    <rect x="289.54" y="101.35" width="24.35" height="25.3" rx="5.23" fill="#E6E8F0"/>
+    
+    <!-- 价值2 -->
+    <rect x="445.52" y="53.83" width="24.35" height="72.64" rx="5.23" fill="url(#gradient4)"/>
+    
+    <!-- 审美4 -->
+    <rect x="406.56" y="85.39" width="24.35" height="40.86" rx="5.23" fill="#E6E8F0"/>
+    
+    <!-- 规范4 -->
+    <rect x="367.54" y="62.36" width="24.35" height="63.56" rx="5.23" fill="#E6E8F0"/>
+    
+    <!-- 渐变定义 -->
+    <defs>
+      <linearGradient id="gradient1" x1="155.053" y1="111.53" x2="113.039" y2="107.531" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#0049C6"/>
+        <stop offset="1" stop-color="#CDF4FF"/>
+      </linearGradient>
+      <linearGradient id="gradient2" x1="237.163" y1="77" x2="283.354" y2="87.7712" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#FFB7F5"/>
+        <stop offset="1" stop-color="#6C5DD3"/>
+      </linearGradient>
+      <linearGradient id="gradient3" x1="366.176" y1="89" x2="366.176" y2="181.103" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#B6FAFF"/>
+        <stop offset="1" stop-color="#0A979D"/>
+      </linearGradient>
+      <linearGradient id="gradient4" x1="484.176" y1="224.958" x2="384.806" y2="159.555" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#FFE3F3"/>
+        <stop offset="1" stop-color="#B0299D"/>
+      </linearGradient>
+    </defs>
+    
+    <!-- X轴标签 -->
+    <g transform="translate(0, 112.25)">
+      <text x="29.02" y="14.23" font-family="Noto Sans SC" font-size="12" fill="#8F95B2" text-anchor="middle">价值</text>
+      <text x="68.01" y="14.23" font-family="Noto Sans SC" font-size="12" fill="#8F95B2" text-anchor="middle">审美</text>
+      <text x="107.01" y="14.23" font-family="Noto Sans SC" font-size="12" fill="#8F95B2" text-anchor="middle">规范</text>
+      <text x="146.02" y="14.23" font-family="Noto Sans SC" font-size="12" fill="#8F95B2" text-anchor="middle">审美</text>
+      <text x="185.02" y="14.23" font-family="Noto Sans SC" font-size="12" fill="#8F95B2" text-anchor="middle">规范</text>
+      <text x="263.04" y="14.23" font-family="Noto Sans SC" font-size="12" fill="#8F95B2" text-anchor="middle">符号</text>
+      <text x="302.04" y="14.23" font-family="Noto Sans SC" font-size="12" fill="#8F95B2" text-anchor="middle">审美</text>
+      <text x="341.05" y="14.23" font-family="Noto Sans SC" font-size="12" fill="#8F95B2" text-anchor="middle">价值</text>
+      <text x="380.05" y="14.23" font-family="Noto Sans SC" font-size="12" fill="#8F95B2" text-anchor="middle">语言</text>
+      <text x="419.06" y="14.23" font-family="Noto Sans SC" font-size="12" fill="#8F95B2" text-anchor="middle">规范</text>
+      <text x="458.07" y="14.23" font-family="Noto Sans SC" font-size="12" fill="#8F95B2" text-anchor="middle">审美</text>
+      <text x="497.07" y="14.23" font-family="Noto Sans SC" font-size="12" fill="#8F95B2" text-anchor="middle">语言</text>
+    </g>
+  </g>
+</svg>

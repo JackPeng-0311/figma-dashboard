@@ -1,0 +1,42 @@
+<svg width="1053" height="354" viewBox="0 0 1053 354" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 主背景 -->
+  <rect x="0" y="0" width="1053" height="354" rx="12" fill="#FFFFFF"/>
+  
+  <!-- 上传图标 -->
+  <g transform="translate(32, 32)">
+    <rect x="0" y="0" width="32" height="32" rx="8" fill="#EAF3FF"/>
+    <path d="M16 8v16M8 16h16" stroke="#168AFF" stroke-width="2" stroke-linecap="round"/>
+  </g>
+  
+  <!-- 标题 -->
+  <text x="76" y="50" font-family="Noto Sans SC" font-size="18" font-weight="700" fill="#168AFF">文化适配检测</text>
+  
+  <!-- 文件上传区域 -->
+  <rect x="49.12" y="120.68" width="954.76" height="88.5" rx="8" fill="#FAFAFA"/>
+  
+  <!-- 文件图标 -->
+  <rect x="65.12" y="136.68" width="56" height="56" rx="8" fill="#F1F2F4"/>
+  <path d="M85 156h16v8H85v-8zm0 8h12v4H85v-4z" fill="#8F95B2"/>
+  
+  <!-- 文件信息 -->
+  <text x="137.12" y="150" font-family="Noto Sans SC" font-size="16" font-weight="500" fill="#111827">印尼斋月营销海报（2024）.jpg</text>
+  <text x="137.12" y="170" font-family="Helvetica Neue" font-size="14" fill="#718096">来自"本地"文件</text>
+  <text x="887.88" y="170" font-family="Noto Sans SC" font-size="14" fill="#718096" text-anchor="end">32mb</text>
+  
+  <!-- 分隔线 -->
+  <line x1="49.12" y1="209.18" x2="1003.88" y2="209.18" stroke="#F1F2F4"/>
+  <line x1="49.12" y1="241.36" x2="1003.88" y2="241.36" stroke="#F1F2F4"/>
+  
+  <!-- 按钮区域 -->
+  <g transform="translate(771, 272)">
+    <!-- 从文件中选择按钮 -->
+    <rect x="0" y="0" width="116" height="48" rx="12" fill="#FFFFFF" stroke="#168AFF" stroke-width="1"/>
+    <text x="58" y="30" font-family="Noto Sans SC" font-size="14" font-weight="700" fill="#168AFF" text-anchor="middle">从文件中选择</text>
+  </g>
+  
+  <!-- 一键检测按钮 -->
+  <g transform="translate(903, 272)">
+    <rect x="0" y="0" width="112" height="48" rx="12" fill="#168AFF"/>
+    <text x="56" y="30" font-family="Noto Sans SC" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">一键检测</text>
+  </g>
+</svg>
