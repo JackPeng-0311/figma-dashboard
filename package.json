@@ -1,0 +1,30 @@
+﻿{
+  "name": "figma-dashboard",
+  "version": "1.0.0",
+  "description": "鏁版嵁鐪嬫澘 - 鍘嗗彶鏂规瀵规瘮",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python -m http.server 8000",
+    "build": "echo 'Static site - no build needed'",
+    "start": "python -m http.server 8000"
+  },
+  "keywords": [
+    "dashboard",
+    "data-visualization",
+    "figma",
+    "html",
+    "css",
+    "javascript"
+  ],
+  "author": "榛勫嚒",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JackPeng-0311/figma-dashboard.git"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "devDependencies": {},
+  "dependencies": {}
+}
